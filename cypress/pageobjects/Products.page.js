@@ -22,7 +22,7 @@ class ProductsPage {
 
     productsSearchVideoAPILink(){
         this.navigate();
-       if(this.clickAcceptCloseBtn().should('be.visible'))
+       if(this.clickAcceptCloseBtn().should('be.visible')==true)
         {
             this.clickAcceptCloseBtn().click();
             this.clickProductsTab().click({force: true});
