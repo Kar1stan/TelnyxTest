@@ -4,6 +4,9 @@ class SignUpPage{
     navigate() {
      return cy.visit('https://telnyx.com/')
     }
+    clickAcceptCloseBtn(){
+      return cy.xpath("//button[text()='Accept and close']")
+    }
     clickSignUpBtn(){
      return cy.get("header>div~div>div>ul>div>a")
     }
@@ -29,6 +32,7 @@ class SignUpPage{
 
     signUpWithValidCredentials(email,fullname,password){
         this.navigate();
+        this.clickAcceptCloseBtn().click();
         this.clickSignUpBtn().click();
         this.fillEmailInput().type(email);
         this.fillFullnameInput().type(fullname);
@@ -39,6 +43,7 @@ class SignUpPage{
 
      signUpWithInvalidPassword(wrongpassword){
         this.navigate();
+        this.clickAcceptCloseBtn().click();
         this.clickSignUpBtn().click();
         this.fillPasswordInput().type(wrongpassword);
         this.clickCreateAccountBtn().click();
@@ -46,12 +51,14 @@ class SignUpPage{
 
      signUpWithEmptyCredentials(){
         this.navigate();
+        this.clickAcceptCloseBtn().click();
         this.clickSignUpBtn().click();
         this.clickCreateAccountBtn().click();
      }
 
      signUpWithLogInLinkButton(){
         this.navigate();
+        this.clickAcceptCloseBtn().click();
         this.clickSignUpBtn().click();
         this.clickSignUpLogInLinkBtn().click();
      }
