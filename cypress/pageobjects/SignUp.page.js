@@ -67,7 +67,7 @@ class SignUpPage{
         }
      }
 
-     signUpWithEmptyCredentials(){
+     fillSignUpWithEmptyCredentials(){
         this.navigate();
         if(this.acceptCloseBtn().should('be.visible'))
         {
