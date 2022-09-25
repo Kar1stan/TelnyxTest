@@ -25,6 +25,10 @@ class ProductsPage {
        if(this.clickAcceptCloseBtn().should('be.visible'))
         {
             this.clickAcceptCloseBtn().click();
+            this.clickProductsTab().click({force: true});
+            this.clickProductsSeeAllProducts().click({ force: true});
+            this.clickProductsVideoAPILink().click();
+            this.clickVideoAPIGetStartedBtn().click();
         }
         else
         {
