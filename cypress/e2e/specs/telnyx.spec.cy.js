@@ -3,23 +3,23 @@ import LogInPage from "../../pageobjects/LogIn.page"
 import ProductsPage from "../../pageobjects/Products.page"
 
 describe('Telnyx Test', () => {
-  it('Should SignUp with valid credentials', () => {
+  it.skip('Should SignUp with valid credentials', () => {
     SignUpPage.signUpWithValidCredentials("dixter29@gmail.com","boroDin","#Y*vz.9f2wh*90d");
     cy.wait(15000)
     cy.url().should('eq','https://telnyx.com/sign-up/verify-email/b');
   })
 
-  it('Should SignUp with invalid password', () => {
+  it.skip('Should SignUp with invalid password', () => {
     SignUpPage.signUpWithInvalidPassword("dfffg1QzBBBqq");
     cy.url().should('eq','https://telnyx.com/sign-up');
   })
 
-  it('Should SignUp with empty credentials', () => {
+  it.skip('Should SignUp with empty credentials', () => {
     SignUpPage.signUpWithEmptyCredentials();
     cy.url().should('eq','https://telnyx.com/sign-up');
   })
 
-  it('Should SignUp with LogIn link button ', () => {
+  it.skip('Should SignUp with LogIn link button ', () => {
     SignUpPage.signUpWithLogInLinkButton();
     LogInPage.logInSignUpLinkBtn('foloxov@gmail.com','ZpPQ_q!!u#Lz6PZ');
     LogInPage.logInErrorConfirmEmail().should('be.visible');
@@ -50,7 +50,7 @@ describe('Telnyx Test', () => {
     LogInPage.logInErrorRequestNotFound().should('be.visible');
   })
 
-  it('Should enter VideoAPI in Products tab', () => {
+  it.skip('Should enter VideoAPI in Products tab', () => {
     ProductsPage.productsSearchVideoAPILink();
     cy.url().should('include','/login/sign-in');
   })
