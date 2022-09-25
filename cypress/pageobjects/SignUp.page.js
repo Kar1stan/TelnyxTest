@@ -55,7 +55,7 @@ class SignUpPage{
 
      signUpWithInvalidPassword(wrongpassword){
         this.navigate();
-        if(this.clickAcceptCloseBtn().should('be.visible'))
+        if(this.clickAcceptCloseBtn().should('be.visible')==true)
         {
             this.clickAcceptCloseBtn().click();
         }
@@ -69,7 +69,7 @@ class SignUpPage{
 
      signUpWithEmptyCredentials(){
         this.navigate();
-        if(this.clickAcceptCloseBtn().should('be.visible'))
+        if(this.clickAcceptCloseBtn().should('be.visible')==true)
         {
             this.clickAcceptCloseBtn().click();
             this.clickSignUpBtn().click();
@@ -84,7 +84,7 @@ class SignUpPage{
 
      signUpWithLogInLinkButton(){
         this.navigate();
-        if(this.clickAcceptCloseBtn().should('be.visible'))
+        if(this.clickAcceptCloseBtn().should('be.visible')==true)
         {
             this.clickAcceptCloseBtn().click();
             this.clickSignUpBtn().click();
