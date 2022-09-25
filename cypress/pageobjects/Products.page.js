@@ -19,8 +19,8 @@ class ProductsPage {
 
     productsSearchVideoAPILink(){
         this.navigate();
-        this.clickProductsTab().click({ force: true });
-        this.clickProductsSeeAllProducts().click({ force: true });
+        this.clickProductsTab().click({force: true});
+        this.clickProductsSeeAllProducts().click({ force: true});
         this.clickProductsVideoAPILink().click();
         this.clickVideoAPIGetStartedBtn().click();
     }
