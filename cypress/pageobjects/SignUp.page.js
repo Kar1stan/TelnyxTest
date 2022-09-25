@@ -5,7 +5,8 @@ class SignUpPage{
      return cy.visit('https://telnyx.com/')
     }
     clickAcceptCloseBtn(){
-     return cy.xpath("//button[text()='Accept and close']")
+     return cy.xpath("button[aria-label='close and deny']~div>div>button")
+     //button[text()='Accept and close']
     }
     clickSignUpBtn(){
      return cy.get("header>div~div>div>ul>div>a")
