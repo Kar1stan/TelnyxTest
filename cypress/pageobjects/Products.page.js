@@ -4,6 +4,9 @@ class ProductsPage {
     navigate(){
      return cy.visit('https://telnyx.com/')
     }
+    clickAcceptCloseBtn(){
+      return cy.xpath("//button[text()='Accept and close']")
+    }
     clickProductsTab(){
      return cy.xpath("//span[text()='Products']");
     }
@@ -19,6 +22,7 @@ class ProductsPage {
 
     productsSearchVideoAPILink(){
         this.navigate();
+        this.clickAcceptCloseBtn().click();
         this.clickProductsTab().click({force: true});
         this.clickProductsSeeAllProducts().click({ force: true});
         this.clickProductsVideoAPILink().click();
