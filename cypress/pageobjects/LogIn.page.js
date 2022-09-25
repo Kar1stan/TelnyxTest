@@ -8,31 +8,31 @@ class LogInPage {
      return cy.xpath("//*[@id='__next']/div[1]/header/div[1]/div/div/a[2]")
      //I have tried search from the nearest id dialogAudio but that didn't work 
     }
-    fillEmailInput(){
+    emailInput(){
      return cy.get("form>div>div>label>span~div>div>input[name='email']")
     }
-    fillPasswordInput(){
+    passwordInput(){
      return cy.get("input[name='password']")
     }
-    clickSubmitBtn(){
+    submitBtn(){
      return cy.xpath("//button[text()='Log in']")
     }
     logInErrorConfirmEmail(){
      return cy.get("div[type='error']")
     }
-    clickSingleSignOnBtn(){
+    singleSignOnBtn(){
      return cy.xpath("//button[text()='Single Sign-On']")
     }
-    fillBusinessNameInput(){
+    businessNameInput(){
      return cy.get("input[name='short_name']")
     }
-    fillCompanyEmailInput(){
+    companyEmailInput(){
      return cy.get("input[placeholder='e.g. jane@acme.com']")
     }
-    clickContinueBtn(){
+    continueBtn(){
      return cy.xpath("//button[text()='Continue']")
     }
-    clickCompanyNameBtn(){
+    companyNameBtn(){
      return cy.xpath("//button[text()='company name']")
     }
     logInErrorRequestNotFound(){
@@ -40,49 +40,49 @@ class LogInPage {
      //it's another error but div has not any other selector-usable trait except type,class is a computer fiction
     }
 
-    logInSignUpLinkBtn(email,password){
-        this.fillEmailInput().type(email);
-        this.fillPasswordInput().type(password);
-        this.clickSubmitBtn().click();
+    clickLogInSignUpLinkBtn(email,password){
+        this.emailInput().type(email);
+        this.passwordInput().type(password);
+        this.submitBtn().click();
     }
 
-    logInWithValidCredentials(email,password){
+    fillLogInWithValidCredentials(email,password){
         this.navigate();
         this.logInBtn().click({ force: true });
-        this.fillEmailInput().type(email);
-        this.fillPasswordInput().type(password);
-        this.clickSubmitBtn().click();
+        this.emailInput().type(email);
+        this.passwordInput().type(password);
+        this.submitBtn().click();
     }
 
-    logInWithInvalidPassword(email,password){
+    fillLogInWithInvalidPassword(email,password){
         this.navigate();
         this.logInBtn().click({ force: true });
-        this.fillEmailInput().type(email);
-        this.fillPasswordInput().type(password);
-        this.clickSubmitBtn().click();
+        this.emailInput().type(email);
+        this.passwordInput().type(password);
+        this.submitBtn().click();
     }
 
-    logInWithEmptyCredentials(){
+    fillLogInWithEmptyCredentials(){
         this.navigate();
         this.logInBtn().click({ force: true });
-        this.clickSubmitBtn().click();
+        this.SubmitBtn().click();
     }
 
-     logInCompanyEmail(falsemail){
+     fillLogInCompanyEmail(falsemail){
         this.navigate();
         this.logInBtn().click({ force: true })
-        this.clickSingleSignOnBtn().click();
-        this.fillCompanyEmailInput().type(falsemail);
-        this.clickContinueBtn().click();
+        this.singleSignOnBtn().click();
+        this.companyEmailInput().type(falsemail);
+        this.continueBtn().click();
     }
 
-     logInBusinessName(falsename){
+     fillLogInBusinessName(falsename){
         this.navigate();
         this.logInBtn().click({ force: true });
-        this.clickSingleSignOnBtn().click();
-        this.clickCompanyNameBtn().click();
-        this.fillBusinessNameInput().type(falsename);
-        this.clickContinueBtn().click();
+        this.singleSignOnBtn().click();
+        this.companyNameBtn().click();
+        this.businessNameInput().type(falsename);
+        this.continueBtn().click();
     }
 }
 module.exports = new LogInPage();
