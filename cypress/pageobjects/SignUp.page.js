@@ -87,7 +87,7 @@ class SignUpPage{
         if(this.acceptCloseBtn().should('be.visible'))
         {
             this.acceptCloseBtn().click();
-            this.aignUpBtn().click();
+            this.signUpBtn().click();
             this.signUpLogInLinkBtn().click();
         }
         else
