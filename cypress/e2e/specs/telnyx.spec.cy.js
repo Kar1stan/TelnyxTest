@@ -20,7 +20,7 @@ describe('Telnyx Test', () => {
   })
 
   it('Should SignUp with LogIn link button ', () => {
-    SignUpPage.signUpWithLogInLinkButton();
+    SignUpPage.clickSignUpWithLogInLinkButton();
     LogInPage.clickLogInSignUpLinkBtn('foloxov@gmail.com','ZpPQ_q!!u#Lz6PZ');
     LogInPage.logInErrorConfirmEmail().should('be.visible');
   })
