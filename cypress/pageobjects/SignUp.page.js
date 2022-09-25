@@ -4,97 +4,97 @@ class SignUpPage{
     navigate() {
      return cy.visit('https://telnyx.com/')
     }
-    AcceptCloseBtn(){
+    acceptCloseBtn(){
      return cy.xpath("//button[text()='Accept and close']")
     }
-    SignUpBtn(){
+    signUpBtn(){
      return cy.get("header>div~div>div>ul>div>a")
     }
-    EmailInput(){
+    emailInput(){
      return cy.get("#email")
     }
-    FullnameInput(){
+    fullnameInput(){
      return cy.get("#full_name")
     }
-    PasswordInput(){
+    passwordInput(){
      return cy.get("#password")
     }
-    TermsConditionsCheckbox(){
+    termsConditionsCheckbox(){
      return cy.get("div[aria-labelledby='terms-label']")
      //it's not an actual checkbox because it has display:none attribute it's the parent element
     }
-    CreateAccountBtn(){
+    createAccountBtn(){
      return cy.get("button[type='submit']")
     }
-    SignUpLogInLinkBtn(){
+    signUpLogInLinkBtn(){
      return cy.xpath("//a[text()='Log in']")
     }
     
     fillSignUpWithValidCredentials(email,fullname,password){
         this.navigate();
         cy.wait(1000)
-        if(this.clickAcceptCloseBtn().should('be.visible'))
+        if(this.acceptCloseBtn().should('be.visible'))
         {
-             this.AcceptCloseBtn().click();
-             this.SignUpBtn().click();
-             this.EmailInput().type(email);
-             this.FullnameInput().type(fullname);
-             this.PasswordInput().type(password);
-             this.TermsConditionsCheckbox().click();
-             this.CreateAccountBtn().dblclick();
+             this.acceptCloseBtn().click();
+             this.signUpBtn().click();
+             this.emailInput().type(email);
+             this.fullnameInput().type(fullname);
+             this.passwordInput().type(password);
+             this.termsConditionsCheckbox().click();
+             this.createAccountBtn().dblclick();
         }
         else
         {
-        this.SignUpBtn().click();
-        this.EmailInput().type(email);
-        this.FullnameInput().type(fullname);
-        this.PasswordInput().type(password);
-        this.TermsConditionsCheckbox().click();
-        this.CreateAccountBtn().dblclick();
+        this.signUpBtn().click();
+        this.emailInput().type(email);
+        this.fullnameInput().type(fullname);
+        this.passwordInput().type(password);
+        this.termsConditionsCheckbox().click();
+        this.createAccountBtn().dblclick();
         }
      }
 
      fillSignUpWithInvalidPassword(wrongpassword){
         this.navigate();
-        if(this.AcceptCloseBtn().should('be.visible'))
+        if(this.acceptCloseBtn().should('be.visible'))
         {
-            this.AcceptCloseBtn().click();
+            this.acceptCloseBtn().click();
         }
         else
         {
-        this.SignUpBtn().click();
-        this.PasswordInput().type(wrongpassword);
-        this.CreateAccountBtn().click();
+        this.signUpBtn().click();
+        this.passwordInput().type(wrongpassword);
+        this.createAccountBtn().click();
         }
      }
 
      signUpWithEmptyCredentials(){
         this.navigate();
-        if(this.AcceptCloseBtn().should('be.visible'))
+        if(this.acceptCloseBtn().should('be.visible'))
         {
-            this.AcceptCloseBtn().click();
-            this.SignUpBtn().click();
-            this.CreateAccountBtn().click();
+            this.acceptCloseBtn().click();
+            this.signUpBtn().click();
+            this.createAccountBtn().click();
         }
         else
         {
-        this.SignUpBtn().click();
-        this.CreateAccountBtn().click();
+        this.signUpBtn().click();
+        this.createAccountBtn().click();
         }
      }
 
      clickSignUpWithLogInLinkButton(){
         this.navigate();
-        if(this.AcceptCloseBtn().should('be.visible'))
+        if(this.acceptCloseBtn().should('be.visible'))
         {
-            this.AcceptCloseBtn().click();
-            this.SignUpBtn().click();
-            this.SignUpLogInLinkBtn().click();
+            this.acceptCloseBtn().click();
+            this.aignUpBtn().click();
+            this.signUpLogInLinkBtn().click();
         }
         else
         {
-        this.SignUpBtn().click();
-        this.SignUpLogInLinkBtn().click();
+        this.signUpBtn().click();
+        this.signUpLogInLinkBtn().click();
         }
      }
     
