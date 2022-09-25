@@ -64,7 +64,7 @@ class LogInPage {
 
     logInWithEmptyCredentials(){
         this.navigate();
-        this.lofInBtn().click({ force: true });
+        this.logInBtn().click({ force: true });
         this.clickSubmitBtn().click();
     }
 
@@ -80,7 +80,7 @@ class LogInPage {
         this.navigate();
         this.logInBtn().click({ force: true });
         this.clickSingleSignOnBtn().click();
-        this.fillCompanyNameBtn().click();
+        this.clickCompanyNameBtn().click();
         this.fillBusinessNameInput().type(falsename);
         this.clickContinueBtn().click();
     }
