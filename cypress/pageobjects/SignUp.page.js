@@ -32,7 +32,7 @@ class SignUpPage{
     
     signUpWithValidCredentials(email,fullname,password){
         this.navigate();
-        if(this.clickAcceptCloseBtn().should('be.visible'))
+        if(this.clickAcceptCloseBtn().should('be.visible')==true)
         {
              this.clickAcceptCloseBtn().click();
              this.clickSignUpBtn().click();
