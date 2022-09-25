@@ -65,7 +65,7 @@ class LogInPage {
     fillLogInWithEmptyCredentials(){
         this.navigate();
         this.logInBtn().click({ force: true });
-        this.SubmitBtn().click();
+        this.submitBtn().click();
     }
 
      fillLogInCompanyEmail(falsemail){
