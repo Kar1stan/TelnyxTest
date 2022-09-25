@@ -29,38 +29,62 @@ class SignUpPage{
     clickSignUpLogInLinkBtn(){
      return cy.xpath("//a[text()='Log in']")
     }
-
+    
     signUpWithValidCredentials(email,fullname,password){
         this.navigate();
-        this.clickAcceptCloseBtn().click();
+        if(this.clickAcceptCloseBtn().should('be.visible'))
+        {
+            this.clickAcceptCloseBtn().click();
+        }
+        else
+        {
         this.clickSignUpBtn().click();
         this.fillEmailInput().type(email);
         this.fillFullnameInput().type(fullname);
         this.fillPasswordInput().type(password);
         this.clickTermsConditionsCheckbox().click();
         this.clickCreateAccountBtn().dblclick();
+        }
      }
 
      signUpWithInvalidPassword(wrongpassword){
         this.navigate();
-        this.clickAcceptCloseBtn().click();
+        if(this.clickAcceptCloseBtn().should('be.visible'))
+        {
+            this.clickAcceptCloseBtn().click();
+        }
+        else
+        {
         this.clickSignUpBtn().click();
         this.fillPasswordInput().type(wrongpassword);
         this.clickCreateAccountBtn().click();
+        }
      }
 
      signUpWithEmptyCredentials(){
         this.navigate();
-        this.clickAcceptCloseBtn().click();
+        if(this.clickAcceptCloseBtn().should('be.visible'))
+        {
+            this.clickAcceptCloseBtn().click();
+        }
+        else
+        {
         this.clickSignUpBtn().click();
         this.clickCreateAccountBtn().click();
+        }
      }
 
      signUpWithLogInLinkButton(){
         this.navigate();
-        this.clickAcceptCloseBtn().click();
+        if(this.clickAcceptCloseBtn().should('be.visible'))
+        {
+            this.clickAcceptCloseBtn().click();
+        }
+        else
+        {
         this.clickSignUpBtn().click();
         this.clickSignUpLogInLinkBtn().click();
+        }
      }
     
 }
