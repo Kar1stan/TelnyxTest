@@ -32,6 +32,7 @@ class SignUpPage{
     
     signUpWithValidCredentials(email,fullname,password){
         this.navigate();
+        cy.wait(1000)
         if(this.clickAcceptCloseBtn().should('be.visible')==true)
         {
              this.clickAcceptCloseBtn().click();
