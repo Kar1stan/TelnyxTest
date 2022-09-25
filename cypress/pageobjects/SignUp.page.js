@@ -5,7 +5,7 @@ class SignUpPage{
      return cy.visit('https://telnyx.com/')
     }
     clickAcceptCloseBtn(){
-      return cy.xpath("//button[text()='Accept and close']")
+     return cy.xpath("//button[text()='Accept and close']")
     }
     clickSignUpBtn(){
      return cy.get("header>div~div>div>ul>div>a")
@@ -34,7 +34,13 @@ class SignUpPage{
         this.navigate();
         if(this.clickAcceptCloseBtn().should('be.visible'))
         {
-            this.clickAcceptCloseBtn().click();
+             this.clickAcceptCloseBtn().click();
+             this.clickSignUpBtn().click();
+             this.fillEmailInput().type(email);
+             this.fillFullnameInput().type(fullname);
+             this.fillPasswordInput().type(password);
+             this.clickTermsConditionsCheckbox().click();
+             this.clickCreateAccountBtn().dblclick();
         }
         else
         {
@@ -66,6 +72,8 @@ class SignUpPage{
         if(this.clickAcceptCloseBtn().should('be.visible'))
         {
             this.clickAcceptCloseBtn().click();
+            this.clickSignUpBtn().click();
+            this.clickCreateAccountBtn().click();
         }
         else
         {
@@ -79,6 +87,8 @@ class SignUpPage{
         if(this.clickAcceptCloseBtn().should('be.visible'))
         {
             this.clickAcceptCloseBtn().click();
+            this.clickSignUpBtn().click();
+            this.clickSignUpLogInLinkBtn().click();
         }
         else
         {
