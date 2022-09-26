@@ -37,26 +37,26 @@ class SignUpPage{
         this.fullnameInput().type(fullname,{force: true});
         this.passwordInput().type(password,{force: true});
         this.termsConditionsCheckbox().click({force: true});
-        this.createAccountBtn().dblclick(); 
+        this.createAccountBtn().dblclick({force: true}); 
      }
 
      fillSignUpWithInvalidPassword(wrongpassword){
         this.navigate(); 
         this.signUpBtn().click({force: true});
         this.passwordInput().type(wrongpassword);
-        this.createAccountBtn().click();
+        this.createAccountBtn().click({force: true});
      }
 
      fillSignUpWithEmptyCredentials(){
         this.navigate();
         this.signUpBtn().click({force: true});
-        this.createAccountBtn().click();
+        this.createAccountBtn().click({force: true});
      }
 
      clickSignUpWithLogInLinkButton(){
         this.navigate();
         this.signUpBtn().click({force: true});
-        this.signUpLogInLinkBtn().click();
+        this.signUpLogInLinkBtn().click({force: true});
      }
     
 }
