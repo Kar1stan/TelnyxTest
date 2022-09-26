@@ -32,35 +32,31 @@ class SignUpPage{
     
     fillSignUpWithValidCredentials(email,fullname,password){
         this.navigate();
-        this.acceptCloseBtn().click();
-        this.signUpBtn().click();
-        this.emailInput().type(email);
-        this.fullnameInput().type(fullname);
-        this.passwordInput().type(password);
-        this.termsConditionsCheckbox().click();
-        this.createAccountBtn().dblclick(); 
+        this.signUpBtn().click({ force: true});
+        this.emailInput().type(email,{ force: true});
+        this.fullnameInput().type(fullname,{ force: true});
+        this.passwordInput().type(password,{ force: true});
+        this.termsConditionsCheckbox().click({ force: true});
+        this.createAccountBtn().dblclick({ force: true}); 
      }
 
      fillSignUpWithInvalidPassword(wrongpassword){
         this.navigate(); 
-        this.acceptCloseBtn().click();
-        this.signUpBtn().click();
-        this.passwordInput().type(wrongpassword);
-        this.createAccountBtn().click();
+        this.signUpBtn().click({ force: true});
+        this.passwordInput().type(wrongpassword,{ force: true});
+        this.createAccountBtn().click({ force: true});
      }
 
      fillSignUpWithEmptyCredentials(){
         this.navigate();
-        this.acceptCloseBtn().click();
-        this.signUpBtn().click();
-        this.createAccountBtn().click();
+        this.signUpBtn().click({ force: true});
+        this.createAccountBtn().click({ force: true});
      }
 
      clickSignUpWithLogInLinkButton(){
         this.navigate();
-        this.acceptCloseBtn().click();
-        this.signUpBtn().click();
-        this.signUpLogInLinkBtn().click();
+        this.signUpBtn().click({ force: true});
+        this.signUpLogInLinkBtn().click({ force: true});
      }
     
 }
