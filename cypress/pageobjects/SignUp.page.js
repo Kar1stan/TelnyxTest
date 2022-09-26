@@ -32,69 +32,31 @@ class SignUpPage{
     
     fillSignUpWithValidCredentials(email,fullname,password){
         this.navigate();
-        if(this.acceptCloseBtn().should('be.visible'))
-        {
-             this.acceptCloseBtn().click();
-             this.signUpBtn().click();
-             this.emailInput().type(email);
-             this.fullnameInput().type(fullname);
-             this.passwordInput().type(password);
-             this.termsConditionsCheckbox().click();
-             this.createAccountBtn().dblclick();
-        }
-        else
-        {
-        this.signUpBtn().click();
-        this.emailInput().type(email);
-        this.fullnameInput().type(fullname);
-        this.passwordInput().type(password);
-        this.termsConditionsCheckbox().click();
-        this.createAccountBtn().dblclick();
-        }
+        this.signUpBtn().click({force: true});
+        this.emailInput().type(email,{force: true});
+        this.fullnameInput().type(fullname,{force: true});
+        this.passwordInput().type(password,{force: true});
+        this.termsConditionsCheckbox().click({force: true});
+        this.createAccountBtn().dblclick(); 
      }
 
      fillSignUpWithInvalidPassword(wrongpassword){
-        this.navigate();
-        if(this.acceptCloseBtn().should('be.visible'))
-        {
-            this.acceptCloseBtn().click();
-        }
-        else
-        {
-        this.signUpBtn().click();
+        this.navigate(); 
+        this.signUpBtn().click({force: true});
         this.passwordInput().type(wrongpassword);
         this.createAccountBtn().click();
-        }
      }
 
      fillSignUpWithEmptyCredentials(){
         this.navigate();
-        if(this.acceptCloseBtn().should('be.visible'))
-        {
-            this.acceptCloseBtn().click();
-            this.signUpBtn().click();
-            this.createAccountBtn().click();
-        }
-        else
-        {
-        this.signUpBtn().click();
+        this.signUpBtn().click({force: true});
         this.createAccountBtn().click();
-        }
      }
 
      clickSignUpWithLogInLinkButton(){
         this.navigate();
-        if(this.acceptCloseBtn().should('be.visible'))
-        {
-            this.acceptCloseBtn().click();
-            this.signUpBtn().click();
-            this.signUpLogInLinkBtn().click();
-        }
-        else
-        {
-        this.signUpBtn().click();
+        this.signUpBtn().click({force: true});
         this.signUpLogInLinkBtn().click();
-        }
      }
     
 }
