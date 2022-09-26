@@ -25,9 +25,9 @@ class ProductsPage {
     clickProductsSearchVideoAPILink(){
         this.navigate();
         this.clickAcceptCloseBtn().click();
-        this.productsTab().click();
+        this.productsTab().click({ force: true});
         this.productsSeeAllProducts().click({ force: true});
-        this.productsVideoAPILink().click({force: true});
+        this.productsVideoAPILink().click();
         this.videoAPIGetStartedBtn().click({force: true});      
     }
 }
