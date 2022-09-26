@@ -6,7 +6,7 @@ describe('Telnyx Test', () => {
   it('Should SignUp with valid credentials', () => {
     SignUpPage.fillSignUpWithValidCredentials("bonolenov98@gmail.com","WeronGan","#L^vx.158wh*91m");
     cy.wait(15000)
-    cy.url().should('eq','https://telnyx.com/sign-up/verify-email/b');
+    cy.url().should('include','/sign-up/verify-email');
   })
 
   it('Should SignUp with invalid password', () => {
