@@ -43,21 +43,24 @@ class SignUpPage{
 
      fillSignUpWithInvalidPassword(wrongpassword){
         this.navigate(); 
-        this.signUpBtn().click({force: true});
-        this.passwordInput().type(wrongpassword,{force: true});
-        this.createAccountBtn().click({force: true});
+        this.acceptCloseBtn().click();
+        this.signUpBtn().click();
+        this.passwordInput().type(wrongpassword);
+        this.createAccountBtn().click();
      }
 
      fillSignUpWithEmptyCredentials(){
         this.navigate();
-        this.signUpBtn().click({force: true});
-        this.createAccountBtn().click({force: true});
+        this.acceptCloseBtn().click();
+        this.signUpBtn().click();
+        this.createAccountBtn().click();
      }
 
      clickSignUpWithLogInLinkButton(){
         this.navigate();
-        this.signUpBtn().click({force: true});
-        this.signUpLogInLinkBtn().click({force: true});
+        this.acceptCloseBtn().click();
+        this.signUpBtn().click();
+        this.signUpLogInLinkBtn().click();
      }
     
 }
