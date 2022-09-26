@@ -43,7 +43,7 @@ class SignUpPage{
      fillSignUpWithInvalidPassword(wrongpassword){
         this.navigate(); 
         this.signUpBtn().click({force: true});
-        this.passwordInput().type(wrongpassword);
+        this.passwordInput().type(wrongpassword,{force: true});
         this.createAccountBtn().click({force: true});
      }
 
