@@ -26,9 +26,9 @@ class ProductsPage {
         this.navigate();
         this.clickAcceptCloseBtn().click();
         this.productsTab().click({ force: true});
-        this.productsSeeAllProducts().click({ force: true});
+        this.productsSeeAllProducts().click();
         this.productsVideoAPILink().click();
-        this.videoAPIGetStartedBtn().click({force: true});      
+        this.videoAPIGetStartedBtn().click();      
     }
 }
 module.exports = new ProductsPage();
