@@ -34,11 +34,11 @@ class SignUpPage{
         this.navigate();
         this.acceptCloseBtn().click();
         this.signUpBtn().click();
-        this.emailInput().type(email,{force: true});
-        this.fullnameInput().type(fullname,{force: true});
-        this.passwordInput().type(password,{force: true});
-        this.termsConditionsCheckbox().click({force: true});
-        this.createAccountBtn().dblclick({force: true}); 
+        this.emailInput().type(email);
+        this.fullnameInput().type(fullname);
+        this.passwordInput().type(password);
+        this.termsConditionsCheckbox().click();
+        this.createAccountBtn().dblclick(); 
      }
 
      fillSignUpWithInvalidPassword(wrongpassword){
