@@ -19,9 +19,12 @@ class ProductsPage {
     videoAPIGetStartedBtn(){
      return cy.get("div>h1~div>div>a[href='https://portal.telnyx.com/#/app/video/video-rooms']")
     }
-
+    clickAcceptCloseBtn(){
+      return cy.xpath("//button[text()='Accept and close']")
+    }
     clickProductsSearchVideoAPILink(){
         this.navigate();
+        this.clickAcceptCloseBtn().click();
         this.productsTab().click({force: true});
         this.productsSeeAllProducts().click({ force: true});
         this.productsVideoAPILink().click({force: true});
