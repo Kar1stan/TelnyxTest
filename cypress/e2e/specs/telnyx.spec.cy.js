@@ -4,7 +4,7 @@ import ProductsPage from "../../pageobjects/Products.page"
 
 describe('Telnyx Test', () => {
   it('Should SignUp with valid credentials', () => {
-    SignUpPage.fillSignUpWithValidCredentials("zixter28@gmail.com","boroQin","#Y*vz.102wh*90d");
+    SignUpPage.fillSignUpWithValidCredentials("bonolenov98@gmail.com","WeronGan","#L^vx.158wh*91m");
     cy.wait(15000)
     cy.url().should('eq','https://telnyx.com/sign-up/verify-email/b');
   })
