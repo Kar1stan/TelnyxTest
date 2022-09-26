@@ -23,7 +23,7 @@ class ProductsPage {
         this.navigate();
         this.productsTab().click({ force: true});
         this.productsSeeAllProducts().click({ force: true});
-        this.productsVideoAPILink().click();
+        this.productsVideoAPILink().click({force: true});
         this.videoAPIGetStartedBtn().click();      
     }
 }
