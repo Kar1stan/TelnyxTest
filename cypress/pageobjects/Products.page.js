@@ -24,7 +24,7 @@ class ProductsPage {
         this.productsTab().click({ force: true});
         this.productsSeeAllProducts().click({ force: true});
         this.productsVideoAPILink().click({force: true});
-        this.videoAPIGetStartedBtn().click();      
+        this.videoAPIGetStartedBtn().click({force: true});      
     }
 }
 module.exports = new ProductsPage();
