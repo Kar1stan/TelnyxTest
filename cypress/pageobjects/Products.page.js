@@ -22,21 +22,10 @@ class ProductsPage {
 
     clickProductsSearchVideoAPILink(){
         this.navigate();
-       if(this.acceptCloseBtn().should('be.visible'))
-        {
-            this.acceptCloseBtn().click();
-            this.productsTab().click({force: true});
-            this.productsSeeAllProducts().click({ force: true});
-            this.productsVideoAPILink().click();
-            this.videoAPIGetStartedBtn().click();
-        }
-        else
-        {
         this.productsTab().click({force: true});
         this.productsSeeAllProducts().click({ force: true});
-        this.productsVideoAPILink().click();
-        this.videoAPIGetStartedBtn().click();
-        }
+        this.productsVideoAPILink().click({force: true});
+        this.videoAPIGetStartedBtn().click({force: true});      
     }
 }
 module.exports = new ProductsPage();
