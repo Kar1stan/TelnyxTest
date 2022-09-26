@@ -32,7 +32,8 @@ class SignUpPage{
     
     fillSignUpWithValidCredentials(email,fullname,password){
         this.navigate();
-        this.signUpBtn().click({force: true});
+        this.acceptCloseBtn().click();
+        this.signUpBtn().click();
         this.emailInput().type(email,{force: true});
         this.fullnameInput().type(fullname,{force: true});
         this.passwordInput().type(password,{force: true});
