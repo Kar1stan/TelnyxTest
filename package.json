@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "cypress:open": "cypress run --headless --browser chrome"
+  },
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^10.8.0",
+    "cypress-xpath": "^2.0.1",
+    "typescript": "^4.8.4"
+  }
+}
