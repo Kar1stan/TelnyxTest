@@ -5,6 +5,7 @@ Telnyx Test
 This project is testing telnyx.com site,using Cypress Page Object Model consists of 10 test cases.
 
 💻 Pre-requisites
+
 Before you use this project you only need to have Node Js installed in your computer.
 
 https://nodejs.org/es/download/
