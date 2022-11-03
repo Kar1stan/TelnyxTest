@@ -4,8 +4,12 @@ Telnyx Test
 # Project Description
 This project is testing telnyx.com site,using Cypress Page Object Model consists of 10 test cases.
 
-# Installation
-This is an example of how you may give instructions on setting up your project locally.
+💻 Pre-requisites
+Before you use this project you only need to have Node Js installed in your computer.
+
+https://nodejs.org/es/download/
+
+Also, delete package-lock file ater you had downloaded or cloned the project
 
 Install NPM packages
 ```
