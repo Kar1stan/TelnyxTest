@@ -8,7 +8,7 @@ Before you use this project you only need to have Node.js installed in your comp
 
 https://nodejs.org/es/download/
 
-##Git clone
+## Git clone
 This will clone the project, install NPM packages and also the Cypres.io which is required to run the test. No Selenium Server is required.
 ```
 $ git clone https://github.com/Kar1stan/TelnyxTest.git
@@ -16,7 +16,7 @@ $ cd TelnyxTest
 $ npm install
 ```
 
-##Run the project
+## Run the project
 To run the tests using Chrome simply run the command:
 ```
 $ npm run cypress:open
