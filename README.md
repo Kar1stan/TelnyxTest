@@ -16,7 +16,7 @@ $ cd TelnyxTest
 $ npm install
 ```
 
-## Run the project
+## 🚀 Run the project
 To run the tests using Chrome open terminal and run the command:
 ```
 $ npm run cypress:open
