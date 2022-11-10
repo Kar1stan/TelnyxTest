@@ -2,13 +2,13 @@
 ***
 This project is testing telnyx.com site,using Cypress Page Object Model consists of 10 test cases.
 
-💻 Pre-requisites
+## 💻 Pre-requisites
 
 Before you use this project you only need to have Node.js installed in your computer.
 
 https://nodejs.org/es/download/
 
-## Git clone
+### Git clone
 This will clone the project, install NPM packages and also the Cypres.io which is required to run the test. No Selenium Server is required.
 ```
 $ git clone https://github.com/Kar1stan/TelnyxTest.git
@@ -17,7 +17,7 @@ $ npm install
 ```
 
 ## Run the project
-To run the tests using Chrome simply run the command:
+To run the tests using Chrome open terminal and run the command:
 ```
 $ npm run cypress:open
 ```
