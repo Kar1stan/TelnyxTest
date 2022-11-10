@@ -20,7 +20,7 @@ export class ProductsPage {
     clickProductsSearchVideoAPILink(){
         this.productsTab().click({force:true});
         this.productsSeeAllProductsBtn().click({force:true});
-        this.productsVideoAPILink().click();
+        this.productsVideoAPILink().click({force:true});
         this.videoAPIGetStartedBtn().click();
     }
 }
