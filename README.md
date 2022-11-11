@@ -7,7 +7,7 @@ This project is testing telnyx.com site,using Cypress Page Object Model consists
 
 Integrated with:
 
-- [x] @shelex/cypress-allure-plugin
+- [x] https://www.npmjs.com/package/@shelex/cypress-allure-plugin
 
 ## 💻 Pre-requisites
 
