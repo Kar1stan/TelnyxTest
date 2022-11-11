@@ -2,6 +2,13 @@
 ***
 This project is testing telnyx.com site,using Cypress Page Object Model consists of 10 test cases.
 
+
+### 💻 Topics
+
+Integrated with:
+
+- [x] @shelex/cypress-allure-plugin
+
 ## 💻 Pre-requisites
 
 Before you use this project you only need to have Node.js installed in your computer.
