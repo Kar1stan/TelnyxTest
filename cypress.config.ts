@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress'; 
-import allureWriter from ('@shelex/cypress-allure-plugin/writer')
+import allureWriter from '@shelex/cypress-allure-plugin/writer';
 
 //If using this approach, just call the key "setupNodeEvents" in the E2E configurations
 // async function setupNodeEvents(on, config) {
