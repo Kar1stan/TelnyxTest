@@ -10,6 +10,9 @@ export default defineConfig({
     env: {
       allureReuseAfterSpec: true
     },
+     args: [
+        '--disable-gpu'                  
+    ],
     baseUrl: 'https://telnyx.com/',
     specPattern: '**/*.spec.{js,jsx,ts,tsx},
     chromeWebSecurity: false,
