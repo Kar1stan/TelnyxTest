@@ -3,7 +3,7 @@
 This project is testing telnyx.com site,using Cypress Page Object Model consists of 10 test cases.
 
 
-### 💻 Topics
+## 💻 Topics
 
 Integrated with:
 
