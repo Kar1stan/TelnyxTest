@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Nov 11 15:50:24 MSK 2022","Fri Nov 11 15:50:49 MSK 2022","25643","","Telnyx Products Test","","","","Should enter VideoAPI in Products tab",""
+"passed","Fri Nov 11 15:51:15 MSK 2022","Fri Nov 11 15:51:27 MSK 2022","11424","","Telnyx Signup Test","","","","Should SignUp with invalid password",""
+"passed","Fri Nov 11 15:51:35 MSK 2022","Fri Nov 11 15:52:01 MSK 2022","25653","","Telnyx Signup Test","","","","Should SignUp with LogIn link button ",""
+"passed","Fri Nov 11 15:51:03 MSK 2022","Fri Nov 11 15:51:15 MSK 2022","12040","","Telnyx Signup Test","","","","Should SignUp with valid credentials",""
+"passed","Fri Nov 11 15:51:27 MSK 2022","Fri Nov 11 15:51:35 MSK 2022","7825","","Telnyx Signup Test","","","","Should SignUp with empty credentials",""
