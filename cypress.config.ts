@@ -1,9 +1,9 @@
 import { defineConfig } from 'cypress'; 
-import allureWriter from "@shelex/cypress-allure-plugin/writer";
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
+    async setupNodeEvents(on, config) {
       allureWriter(on, config);
       return config;
     },
@@ -12,5 +12,6 @@ module.exports = defineConfig({
     },
     baseUrl: 'https://telnyx.com/',
     specPattern: '**/*.spec.{js,jsx,ts,tsx},
+    chromeWebSecurity: false,
   },
 });
