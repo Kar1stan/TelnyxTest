@@ -1,7 +1,7 @@
 import { defineConfig } from 'cypress'; 
 import allureWriter from "@shelex/cypress-allure-plugin/writer";
 
-export default defineConfig({
+module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       allureWriter(on, config);
