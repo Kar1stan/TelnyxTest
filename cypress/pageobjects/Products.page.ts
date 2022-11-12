@@ -21,6 +21,6 @@ export class ProductsPage {
         this.productsTab().click({force:true});
         this.productsSeeAllProductsBtn().click({force:true});
         this.productsVideoAPILink().click({force:true});
-        this.videoAPIGetStartedBtn().click();
+        this.videoAPIGetStartedBtn().click({force:true});
     }
 }
