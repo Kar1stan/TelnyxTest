@@ -11,7 +11,7 @@ export default defineConfig({
       allureReuseAfterSpec: true
     },
     baseUrl: 'https://telnyx.com/',
-    specPattern: '**/*.spec.{js,jsx,ts,tsx},
+    specPattern: '**/*.spec.{js,jsx,ts,tsx}',
     chromeWebSecurity: false,
   },
 });
