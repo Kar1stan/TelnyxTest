@@ -26,7 +26,7 @@ describe('Telnyx Signup Test', () => {
       it('Should SignUp with invalid password', () => {
         const signupPage = new SignUpPage();
         signupPage.clickSignUpBtn();
-        signupPage.fillPassword(InvalidPassword);
+        signupPage.fillPassword(invalidPassword);
         signupPage.clickTermAndConditionsCheckbox();
         signupPage.clickCreateAccountBtn();
         cy.url().should('eq','https://telnyx.com/sign-up');
