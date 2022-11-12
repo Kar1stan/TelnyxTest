@@ -2,7 +2,7 @@ import {SignUpPage} from "../../pageobjects/SignUp.page";
 import {LogInPage} from "../../pageobjects/LogIn.page"
 import {MainPage} from "../../pageobjects/MainPage.page"
 
-const InvalidPassword="dfffg1QzBBBqq";
+const invalidPassword="dfffg1QzBBBqq";
 
 beforeEach(() => {
   const mainPage = new MainPage();
