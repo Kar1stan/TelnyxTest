@@ -10,7 +10,7 @@ export class ProductsPage {
     }
 
     productsVideoAPILink(){
-     return cy.xpath("//span[text()='Telnyx Video API']")
+     return cy.xpath("//span[text()='Telnyx Video API']",{ timeout: 5000 })
     }
 
     videoAPIGetStartedBtn(){
