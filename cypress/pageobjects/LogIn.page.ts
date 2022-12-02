@@ -45,7 +45,7 @@ class LogInPage {
     }
 
     clickLogInBtn(){
-        this.logInBtn.click();
+        this.logInBtn.click({force:true});
     }
 
     fillEmail(email:string){
