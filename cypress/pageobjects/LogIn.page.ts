@@ -2,7 +2,7 @@
 
 class LogInPage {
     get logInBtn(){
-     return cy.xpath("//span[text()='Log In']") 
+     return cy.get("header>div>div>div>a~a[class='sc-f97529d6-0 bjUuRN Text-sc-5o8owa-0 sc-28d89a84-0 frufKM blLdCs mchNoDecorate']") 
     }
 
     get emailInput(){
@@ -46,7 +46,6 @@ class LogInPage {
     }
 
     clickLogInBtn(){
-        this.logInBtn.scrollIntoView();
         this.logInBtn.click();
     }
 
