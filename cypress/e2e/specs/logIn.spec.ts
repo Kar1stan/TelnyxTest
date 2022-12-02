@@ -12,7 +12,7 @@ describe('Telnyx Login Test', () => {
     LogInPage.fillEmail(Cypress.env('Email'));
     LogInPage.fillPassword(Cypress.env('Password'));
     LogInPage.clickSubmitBtn();
-    LogInPage.logInError.should('be.visible');
+    cy.url().should('include','/login/sign-in');
   })
 
   it('Should LogIn with invalid password with 4 symbols', () => {
@@ -20,7 +20,7 @@ describe('Telnyx Login Test', () => {
     LogInPage.fillEmail(Cypress.env('Email'));
     LogInPage.fillPassword(Cypress.env('WrongPasswordWithFourSymbols'));
     LogInPage.clickSubmitBtn();
-    LogInPage.logInError.should('be.visible');
+     cy.url().should('include','/login/sign-in');
   })
 
   it('Should LogIn with empty credentials', () => {
@@ -33,7 +33,7 @@ describe('Telnyx Login Test', () => {
     LogInPage.clickSingleSignOnBtn();
     LogInPage.fillCompanyEmail(Cypress.env('CompanyEmailWithout@'));
     LogInPage.clickContinueBtn();
-    LogInPage.logInErrorRequestNotFound.should('be.visible');
+     cy.url().should('include','/login/sign-in');
   })
 
   it('Should LogIn false business name with four numbers in Single Sign-On', () => {
@@ -42,7 +42,7 @@ describe('Telnyx Login Test', () => {
     LogInPage.clickCompanyName();
     LogInPage.fillBusinessName(Cypress.env('BusinessNameWithFourNumbers'));
     LogInPage.clickContinueBtn();
-    LogInPage.logInErrorRequestNotFound.should('be.visible');
+     cy.url().should('include','/login/sign-in');
   })
 
 })
