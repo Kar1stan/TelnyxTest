@@ -1,7 +1,7 @@
 
 class LogInPage {
     get logInBtn(){
-     return cy.xpath("//*[@id='__next']/div[1]/header/div[1]/div/div/a[2]") 
+     return cy.xpath("//span[text()='Log In']") 
     }
 
     get emailInput(){
@@ -45,7 +45,8 @@ class LogInPage {
     }
 
     clickLogInBtn(){
-        this.logInBtn.click({force:true});
+        this.logInBtn.scrollIntoView();
+        this.logInBtn.click();
     }
 
     fillEmail(email:string){
