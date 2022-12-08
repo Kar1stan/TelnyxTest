@@ -1,7 +1,7 @@
 
 class LogInPage {
     get logInBtn(){
-    return cy.get("audio[id=dialogAudio]~a+a+a+a") 
+    return cy.xpath("//a[text()='Log In'][1]") 
     }
 
     get emailInput(){
@@ -45,7 +45,7 @@ class LogInPage {
     }
 
     clickLogInBtn(){
-        this.logInBtn.click({force:true});
+        this.logInBtn.click();
     }
 
     fillEmail(email:string){
