@@ -24,6 +24,7 @@ describe('Telnyx Login Test', () => {
   })
 
   it('Should LogIn with empty credentials', () => {
+    LogInPage.clickLogInBtn();
     LogInPage.logInWithEmptyCredentials();
     cy.url().should('include','/login/sign-in');
   })
