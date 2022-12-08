@@ -45,7 +45,7 @@ class LogInPage {
     }
 
     clickLogInBtn(){
-        this.logInBtn.click({force: true});
+        this.logInBtn.click();
     }
 
     fillEmail(email:string){
@@ -61,8 +61,6 @@ class LogInPage {
     }
 
     logInWithEmptyCredentials(){
-        this.logInBtn.scrollIntoView();
-        this.logInBtn.click();
         this.submitBtn.click();
     }
 
