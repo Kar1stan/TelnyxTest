@@ -62,8 +62,6 @@ class LogInPage {
     }
 
     logInWithEmptyCredentials(){
-        this.logInBtn.scrollIntoView();
-        this.logInBtn.click();
         this.submitBtn.click();
     }
 
